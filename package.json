@@ -1,0 +1,41 @@
+{
+  "name"        : "miso.events",
+  "title"       : "Miso.Events",
+  "description" : "A collection of event related functions that can be mixed into any object",
+  "version"     : "0.0.1",
+  "homepage"    : "http://github.com/misoproject/events",
+  "authors"     : "Alex Graul, Irene Ros",
+  
+  "bugs" : {
+    "url" : "http://github.com:misoproject/events/issues"
+  },
+
+  "licenses" : [  
+    {
+      "type" : "MIT",
+      "url" : "http://github.com:misoproject/events/blob/master/LICENSE-MIT"
+    },
+    {
+      "type" : "GPL",
+      "url" : "http://github.com:misoproject/events/blob/master/LICENSE-GPL"
+    }
+  ],
+
+  "main": "dist/node/miso.events.0.0.1.js",
+
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:misoproject/events.git"
+  },
+
+  "keywords" : [ "data", "events", "miso" ],
+
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+
+  "dependencies": {
+    "lodash": "0.9.2",
+    "connect" : "2.4.4"
+  }
+}
