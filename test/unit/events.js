@@ -44,6 +44,21 @@ test("subscribeOnce", 1, function() {
   app.publish('test');
 });
 
+test("subscribeOnce With Options", 1, function() {
+  var app = _.extend({}, Miso.Events);
+
+  var context = { counter : 0 };
+  
+  function tester() {
+    this.counter++;
+  }
+
+  app.subscribeOnce('test', tester, { context: context });
+  app.publish('test');
+  app.publish('test');
+  ok(context.counter === 1);
+});
+
 test("priority", function() {
   var app = _.extend({}, Miso.Events);
   var output = [];

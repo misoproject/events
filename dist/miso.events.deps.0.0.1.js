@@ -4252,14 +4252,24 @@
     * Params:
     *   name - name of event
     *   callback - The callback to trigger
+    *   options - optional arguments
+    *     priority - allows rearranging of existing callbacks based on priority
+    *     context - allows attaching diff context to callback
+    *     token - allows callback identification by token.
     */
-    subscribeOnce : function(name, callback) {
+    subscribeOnce : function(name, callback, options) {
       this._events = this._events || {};
-      var token = _.uniqueId('t');
+      options = options || {};
+      var self = this;
+
+      if (typeof options.token === "undefined") {
+        options.token = _.uniqueId('t');
+      }
+
       return this.subscribe(name, function() {
-        this.unsubscribe(name, { token : token });
+        self.unsubscribe(name, { token : options.token });
         callback.apply(this, arguments);
-      }, this, token);
+      }, options);
     },
 
     /**
