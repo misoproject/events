@@ -77,11 +77,11 @@ You can omit the identifier to unsubscribe all events for a particular `name`.
 
 ## Contributing 
 
-To build Scene you'll need npm, node.js's package management system and grunt
+To build Miso.Events you'll need npm, node.js's package management system and grunt
 
 `npm install`
 
-To build Miso.Storyboard, call
+To build Miso.Events, call
 
 `grunt`
 
