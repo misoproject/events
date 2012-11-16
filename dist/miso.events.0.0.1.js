@@ -1,5 +1,5 @@
 /**
-* Miso.Events - v0.0.1 - 11/14/2012
+* Miso.Events - v0.0.1 - 11/16/2012
 * http://github.com/misoproject/events
 * Copyright (c) 2012 Alex Graul, Irene Ros;
 * Dual Licensed: MIT, GPL
